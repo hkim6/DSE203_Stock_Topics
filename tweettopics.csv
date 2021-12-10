@@ -1,0 +1,345 @@
+key,count,weight,topic
+"""profit""",2,0.008333333,earnings
+"""stock""",2,0.005333333,earnings
+"""get""",2,0.004666667,earnings
+"""year""",1,0.004333333,earnings
+"""record""",1,0.003666667,earnings
+"""pandemic""",1,0.003,earnings
+"""agreement""",1,0.003,earnings
+"""sharing""",1,0.002666667,earnings
+"""venture""",1,0.002666667,earnings
+"""joint""",1,0.002666667,earnings
+"""revenue""",1,0.002666667,earnings
+"""loss""",1,0.002666667,earnings
+"""report""",1,0.002666667,earnings
+"""bring""",1,0.002333333,earnings
+"""announce""",1,0.002333333,earnings
+"""good""",1,0.002333333,earnings
+"""high""",1,0.002333333,earnings
+"""electric""",1,0.002333333,earnings
+"""uber""",1,0.002333333,earnings
+"""quarterly""",1,0.002333333,earnings
+"""rebound""",1,0.002333333,earnings
+"""include""",1,0.002333333,earnings
+"""know""",1,0.002333333,earnings
+"""check""",1,0.002333333,earnings
+"""thing""",1,0.002333333,earnings
+"""market""",1,0.002,earnings
+"""innovation""",1,0.002,earnings
+"""battery""",1,0.002,earnings
+"""lead""",1,0.002,earnings
+"""performer""",1,0.002,earnings
+"""weekly""",1,0.002,earnings
+"""buy""",1,0.002,earnings
+"""go""",1,0.002,earnings
+"""member""",1,0.002,earnings
+"""union""",1,0.002,earnings
+"""4q""",1,0.002,earnings
+"""gold""",1,0.002,earnings
+"""charge""",1,0.002,earnings
+"""line""",1,0.002,earnings
+"""amp""",1,0.002,earnings
+"""look""",1,0.002,earnings
+"""bad""",1,0.002,earnings
+"""sell""",1,0.001666667,earnings
+"""news""",1,0.001666667,earnings
+"""drive""",1,0.001666667,earnings
+"""day""",1,0.001666667,earnings
+"""release""",1,0.001666667,earnings
+"""increase""",1,0.001666667,earnings
+"""see""",1,0.001666667,earnings
+"""top""",1,0.001666667,earnings
+"""today""",1,0.001666667,earnings
+"""swing""",1,0.001666667,earnings
+"""motor""",1,0.001666667,earnings
+"""number""",1,0.001666667,earnings
+"""make""",1,0.001666667,earnings
+"""consensus""",1,0.001666667,earnings
+"""exclusive""",1,0.001666667,earnings
+"""shortage""",5,0.0031,supply chain
+"""stock""",1,0.0026,supply chain
+"""hit""",2,0.00235,supply chain
+"""chip""",3,0.001616667,supply chain
+"""low""",1,0.0016,supply chain
+"""circuit""",1,0.0016,supply chain
+"""expect""",3,0.0014,supply chain
+"""support""",1,0.0014,supply chain
+"""sale""",2,0.001216667,supply chain
+"""negative""",1,0.0012,supply chain
+"""long""",1,0.0012,supply chain
+"""warn""",1,0.0012,supply chain
+"""end""",1,0.0012,supply chain
+"""report""",3,0.001183333,supply chain
+"""production""",2,0.001116667,supply chain
+"""say""",1,0.0011,supply chain
+"""semiconductor""",3,0.00105,supply chain
+"""good""",1,0.001,supply chain
+"""margin""",1,0.001,supply chain
+"""break""",1,0.001,supply chain
+"""r""",1,0.001,supply chain
+"""safe""",1,0.001,supply chain
+"""bn""",1,0.001,supply chain
+"""line""",1,0.001,supply chain
+"""halt""",1,0.001,supply chain
+"""automaker""",2,0.000783333,supply chain
+"""world""",1,0.0006,supply chain
+"""impact""",1,0.0006,supply chain
+"""столкнулась""",1,0.0006,supply chain
+"""отрасль""",1,0.0006,supply chain
+"""animal""",1,0.0006,supply chain
+"""stop""",1,0.0006,supply chain
+"""want""",1,0.0006,supply chain
+"""abuse""",1,0.0006,supply chain
+"""factory""",1,0.0006,supply chain
+"""sign""",1,0.0006,supply chain
+"""south""",1,0.0006,supply chain
+"""carmaker""",1,0.00055,supply chain
+"""jv""",1,0.00055,supply chain
+"""earning""",2,0.0005,supply chain
+"""global""",3,0.0003,supply chain
+"""quarter""",2,0.000266667,supply chain
+"""see""",1,0.000233333,supply chain
+"""cut""",1,0.0002,supply chain
+"""miss""",1,0.000166667,supply chain
+"""ad""",1,0.000166667,supply chain
+"""second""",1,0.00015,supply chain
+"""expectation""",1,0.00015,supply chain
+"""lemans24""",1,0.00015,supply chain
+"""raise""",1,0.00015,supply chain
+"""guidance""",1,0.000133333,supply chain
+"""poke""",1,0.000133333,supply chain
+"""beat""",1,0.000133333,supply chain
+"""share""",1,0.000133333,supply chain
+"""hour""",1,0.000133333,supply chain
+"""fun""",1,0.000133333,supply chain
+"""year""",1,0.000133333,supply chain
+"""final""",1,0.000133333,supply chain
+"""practice""",1,0.000116667,supply chain
+"""strong""",1,0.000116667,supply chain
+"""fourth""",1,0.000116667,supply chain
+"""result""",1,0.000116667,supply chain
+"""session""",1,0.0001,supply chain
+"""company""",1,0.0001,supply chain
+"""split""",1,0.0001,supply chain
+"""net""",1,0.0001,supply chain
+"""estimate""",1,0.0001,supply chain
+"""come""",1,0.0001,supply chain
+"""rev""",1,0.0001,supply chain
+"""revenue""",1,0.0001,supply chain
+"""pic""",1,8.33E-05,supply chain
+"""market""",1,8.33E-05,supply chain
+"""tell""",1,8.33E-05,supply chain
+"""buy""",1,8.33E-05,supply chain
+"""tonight""",1,6.67E-05,supply chain
+"""speed""",1,6.67E-05,supply chain
+"""win""",1,6.67E-05,supply chain
+"""🔥""",1,6.67E-05,supply chain
+"""free""",1,6.67E-05,supply chain
+"""huge""",1,6.67E-05,supply chain
+"""car""",4,0.002016667,new_prod
+"""think""",2,0.0014,new_prod
+"""thank""",2,0.00135,new_prod
+"""amp""",1,0.0012,new_prod
+"""go""",2,0.00105,new_prod
+"""son""",1,0.001,new_prod
+"""wallpaper""",1,0.001,new_prod
+"""reach""",1,0.001,new_prod
+"""test""",1,0.001,new_prod
+"""charge""",1,0.001,new_prod
+"""check""",1,0.001,new_prod
+"""driver""",1,0.001,new_prod
+"""improvement""",1,0.0008,new_prod
+"""speed""",1,0.0008,new_prod
+"""beautiful""",1,0.0008,new_prod
+"""agree""",1,0.0008,new_prod
+"""modely""",1,0.0008,new_prod
+"""imagine""",1,0.0008,new_prod
+"""drain""",1,0.0008,new_prod
+"""adapter""",1,0.0008,new_prod
+"""take""",3,0.000683333,new_prod
+"""electric""",3,0.00065,new_prod
+"""battery""",1,0.0005,new_prod
+"""unveil""",2,0.0005,new_prod
+"""truck""",2,0.000433333,new_prod
+"""build""",1,0.00035,new_prod
+"""hour""",1,0.00035,new_prod
+"""call""",1,0.0003,new_prod
+"""public""",1,0.00025,new_prod
+"""support""",1,0.00025,new_prod
+"""form""",1,0.00025,new_prod
+"""procure""",1,0.00025,new_prod
+"""south""",1,0.00025,new_prod
+"""remember""",1,0.00025,new_prod
+"""say""",1,0.00025,new_prod
+"""founder""",1,0.00025,new_prod
+"""futuristic""",1,0.00025,new_prod
+"""fly""",1,0.000233333,new_prod
+"""vehicle""",1,0.000166667,new_prod
+"""concept""",1,0.000166667,new_prod
+"""share""",1,0.00015,new_prod
+"""self""",1,0.00015,new_prod
+"""passenger""",1,0.00015,new_prod
+"""street""",1,0.00015,new_prod
+"""drive""",1,0.00015,new_prod
+"""land""",1,0.00015,new_prod
+"""high""",1,0.00015,new_prod
+"""invest""",1,0.000133333,new_prod
+"""carry""",1,0.000133333,new_prod
+"""air""",1,0.000133333,new_prod
+"""employee""",1,0.000133333,new_prod
+"""😎""",1,0.000133333,new_prod
+"""run""",1,0.000133333,new_prod
+"""trade""",1,0.000116667,new_prod
+"""stock""",1,0.0001,new_prod
+"""race""",1,0.0001,new_prod
+"""present""",1,0.0001,new_prod
+"""let""",1,0.0001,new_prod
+"""urge""",1,0.0001,new_prod
+"""time""",1,0.0001,new_prod
+"""arm""",1,0.0001,new_prod
+"""spending""",1,0.0001,new_prod
+"""bargaining""",1,8.33E-05,new_prod
+"""live""",1,8.33E-05,new_prod
+"""weekend""",1,8.33E-05,new_prod
+"""catch""",1,8.33E-05,new_prod
+"""entry""",1,8.33E-05,new_prod
+"""😫""",1,8.33E-05,new_prod
+"""know""",1,8.33E-05,new_prod
+"""work""",1,8.33E-05,new_prod
+"""bass""",1,8.33E-05,new_prod
+"""want""",1,8.33E-05,new_prod
+"""table""",1,8.33E-05,new_prod
+"""q""",1,8.33E-05,new_prod
+"""file""",1,8.33E-05,new_prod
+"""news""",1,8.33E-05,new_prod
+"""new""",1,8.33E-05,new_prod
+"""production""",1,6.67E-05,new_prod
+"""appreciate""",1,6.67E-05,new_prod
+"""gap""",1,6.67E-05,new_prod
+"""maggat""",1,6.67E-05,new_prod
+"""technology""",1,6.67E-05,new_prod
+"""relate""",1,6.67E-05,new_prod
+"""recall""",1,6.67E-05,new_prod
+"""king""",1,6.67E-05,new_prod
+"""hockey""",1,6.67E-05,new_prod
+"""team""",1,6.67E-05,new_prod
+"""fella""",1,6.67E-05,new_prod
+"""motor""",2,0.0049,investing
+"""today""",4,0.003866667,investing
+"""share""",3,0.003116667,investing
+"""price""",3,0.002833333,investing
+"""fall""",1,0.0024,investing
+"""reach""",1,0.0018,investing
+"""take""",1,0.0016,investing
+"""minute""",2,0.001483333,investing
+"""think""",1,0.0014,investing
+"""happen""",1,0.0014,investing
+"""reaction""",1,0.0014,investing
+"""update""",2,0.001266667,investing
+"""market""",2,0.00125,investing
+"""spoil""",1,0.0012,investing
+"""tank""",1,0.0012,investing
+"""level""",1,0.0012,investing
+"""trader""",1,0.0012,investing
+"""trade""",1,0.0012,investing
+"""party""",1,0.001,investing
+"""people""",1,0.001,investing
+"""stock""",4,0.000733333,investing
+"""awesome""",2,0.000383333,investing
+"""sell""",2,0.00035,investing
+"""point""",1,0.0003,investing
+"""good""",2,0.000283333,investing
+"""company""",1,0.00025,investing
+"""💙""",1,0.00025,investing
+"""have""",1,0.00025,investing
+"""favorite""",1,0.00025,investing
+"""stall""",1,0.00025,investing
+"""work""",1,0.00025,investing
+"""raise""",1,0.000233333,investing
+"""periodt""",1,0.0002,investing
+"""worth""",1,0.0002,investing
+"""say""",1,0.0002,investing
+"""video""",1,0.0002,investing
+"""map""",1,0.0002,investing
+"""tsla""",1,0.0002,investing
+"""invest""",2,0.0002,investing
+"""order""",1,0.0002,investing
+"""plan""",1,0.000166667,investing
+"""list""",2,0.000166667,investing
+"""buy""",2,0.00015,investing
+"""target""",1,0.00015,investing
+"""analyst""",1,0.000133333,investing
+"""wait""",1,0.000116667,investing
+"""look""",1,0.000116667,investing
+"""call""",1,0.000116667,investing
+"""issue""",1,0.0001,investing
+"""bitcoin""",1,0.0001,investing
+"""continue""",1,0.0001,investing
+"""year""",1,0.0001,investing
+"""session""",1,0.0001,investing
+"""want""",1,0.0001,investing
+"""new""",1,0.0001,investing
+"""american""",1,8.33E-05,investing
+"""gain""",1,8.33E-05,investing
+"""trading""",1,8.33E-05,investing
+"""follow""",1,8.33E-05,investing
+"""premarket""",1,8.33E-05,investing
+"""production""",1,8.33E-05,investing
+"""evaluate""",1,8.33E-05,investing
+"""extend""",1,8.33E-05,investing
+"""jpmorgan""",1,8.33E-05,investing
+"""investor""",1,8.33E-05,investing
+"""tesla""",1,8.33E-05,investing
+"""hope""",1,8.33E-05,investing
+"""confirm""",1,8.33E-05,investing
+"""bln""",1,8.33E-05,investing
+"""t""",1,8.33E-05,investing
+"""x""",1,8.33E-05,investing
+"""general""",1,8.33E-05,investing
+"""morning""",1,8.33E-05,investing
+"""af""",1,6.67E-05,investing
+"""5125qg""",1,6.67E-05,investing
+"""lithium""",1,6.67E-05,investing
+"""😊""",1,6.67E-05,investing
+"""demand""",1,6.67E-05,investing
+"""brother""",1,6.67E-05,investing
+"""poor""",1,6.67E-05,investing
+"""partner""",2,0.024,partnership
+"""drive""",1,0.019,partnership
+"""self""",1,0.018,partnership
+"""car""",1,0.016,partnership
+"""accelerate""",1,0.015,partnership
+"""team""",1,0.013,partnership
+"""electric""",1,0.013,partnership
+"""vehicle""",1,0.013,partnership
+"""plant""",1,0.013,partnership
+"""rollout""",1,0.012,partnership
+"""driverless""",1,0.011,partnership
+"""commercialization""",1,0.01,partnership
+"""second""",1,0.009,partnership
+"""tech""",1,0.009,partnership
+"""invest""",1,0.009,partnership
+"""share""",1,0.008,partnership
+"""seat""",1,0.008,partnership
+"""good""",1,0.008,partnership
+"""business""",1,0.008,partnership
+"""thank""",1,0.008,partnership
+"""new""",1,0.008,partnership
+"""incentive""",1,0.007,partnership
+"""sale""",1,0.007,partnership
+"""event""",1,0.007,partnership
+"""shareholder""",1,0.007,partnership
+"""company""",1,0.007,partnership
+"""maker""",1,0.007,partnership
+"""majority""",1,0.007,partnership
+"""autonomous""",1,0.007,partnership
+"""subsidiary""",1,0.007,partnership
+"""supplier""",1,0.006,partnership
+"""hydrogen""",1,0.006,partnership
+"""today""",1,0.006,partnership
+"""runaway""",1,0.006,partnership
+"""back""",1,0.006,partnership
+"""partnership""",1,0.006,partnership
+"""stock""",1,0.006,partnership
+"""competition""",1,0.006,partnership
+"""week""",1,0.006,partnership
