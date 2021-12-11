@@ -1,3 +1,4 @@
+# This is a copy from the snscrape github, but needed to be adjusted apply multiple attempts before raising exception
 import collections
 import dataclasses
 import datetime

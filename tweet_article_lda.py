@@ -3,11 +3,9 @@ import nltk
 
 import pandas as pd
 
-
 # Gensim
 import gensim
 import gensim.corpora as corpora
-
 from gensim import models
 
 # spacy for lemmatization
@@ -16,26 +14,24 @@ import spacy
 # Enable logging for gensim - optional
 import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.ERROR)
-
 import warnings
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 
 from nltk.corpus import stopwords
 stop_words = stopwords.words('english')
 stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
-
 nlp = spacy.load("en_core_web_lg")
 nlp.max_length = 1500000
-
 import py_stringmatching as sm
 
 
 class Topic_Classification:
+    # Initialize Class, if topic_file = 0, utilize the article topic master_set, if it is 1 utilize the one for tweets
     def __init__(self, topic_file=0):
         if topic_file == 0:
-            use_file = 'articleTopics.csv'
+            use_file = 'masterlists/articleTopics.csv'
         else:
-            use_file = "tweettopics.csv"
+            use_file = "masterlists/tweettopics.csv"
         self.topic_file = topic_file
         topic_df = pd.read_csv(use_file)
         master_list = []
@@ -43,7 +39,9 @@ class Topic_Classification:
             master_list.append((topic, topic_df.loc[topic_df['topic'] == topic].reset_index(drop=True)))
         self.master_list = master_list
 
+    # Perform LDA on the tweets
     def tweet_lda(self, df_tweets):
+        # Drop tweets that are identical to ensure no saturation for classification
         al_tok = sm.AlphabeticTokenizer()
         jac = sm.Jaccard()
         drop_list = []
@@ -61,41 +59,41 @@ class Topic_Classification:
         # Loop through all documents in the training corpus and combine into single list
         for tweet in df_tweets['content']:
 
-            # Clean text
+            # Clean text removing escape characters and spaces
             tweet = tweet.strip()
             tweet = tweet.replace('\n', ' ').replace('\r', '').replace(' ', ' ').replace(' ', ' ')
             while '  ' in tweet:
-                tweet = tweet.replace('  ', ' ')  # Remove extra spaces
+                tweet = tweet.replace('  ', ' ')
 
             # Parse document with SpaCy
             tweetdoc = nlp(tweet)
-
-            tweetlist = []  # Temporary list to store individual document
+            tweetlist = []
 
             # Keep relevant words and apply lemmatization
             for token in tweetdoc:
+                # Remove strings that contain 'http' and '@' which commonly appear in tweets but do not help context
                 if 'http' not in str(token) and '@' not in str(token):
                     if token.is_stop == False and token.is_punct == False and (
                             token.pos_ == "NOUN" or token.pos_ == "ADJ" or token.pos_ == "VERB"):
-                        tweetlist.append(
-                            token.lemma_.lower())
-                        tweetWordCloud.append(token.lemma_.lower())  # Build the WordCloud list
+                        tweetlist.append(token.lemma_.lower())
+                        tweetWordCloud.append(token.lemma_.lower())
+            # Add to list for training corpus
+            tweetDocuments.append(tweetlist)
 
-            tweetDocuments.append(tweetlist)  # Build the training corpus 'list of lists'
-
+        # Create bag of words and fit TF-IDF model
         ID2word = corpora.Dictionary(tweetDocuments)
 
-        corpus = [ID2word.doc2bow(doc) for doc in
-                  tweetDocuments]  # Apply Bag of Words to all documents in training corpus
-        TFIDF = models.TfidfModel(corpus)  # Fit TF-IDF model
-        trans_TFIDF = TFIDF[corpus]  # Apply TF-IDF model
+        corpus = [ID2word.doc2bow(doc) for doc in tweetDocuments]
+        TFIDF = models.TfidfModel(corpus)
+        trans_TFIDF = TFIDF[corpus]
 
         # Train LDA model
         lda_model = gensim.models.LdaMulticore(corpus=trans_TFIDF, num_topics=3, id2word=ID2word,
                                                random_state=42, alpha=0.9, eta=0.35, passes=100)
 
+        # Write topics to list with 20 words each
         t_list = lda_model.print_topics(num_words=20)
-
+        # Call Topic_Classification method to get back the topic label
         ret_topic = Topic_Classification.assign_topic(t_list, self.master_list)
 
         return ret_topic
@@ -118,7 +116,7 @@ class Topic_Classification:
         # Loop through all documents in the training corpus and combine into single list
         for article in df_articles['content']:
 
-            # Clean text
+            # Clean text removing escape characters and spaces
             article = article.strip()
             article = article.replace('\n', ' ').replace('\r', '').replace(' ', ' ').replace(' ', ' ')
             while '  ' in article:
@@ -129,32 +127,30 @@ class Topic_Classification:
 
             # Parse document with SpaCy
             artdoc = nlp(article)
-
-            artlist = []  # Temporary list to store individual document
+            artlist = []
 
             # Keep relevant words and apply lemmatization
             for token in artdoc:
                 if token.is_stop == False and token.is_punct == False and (
                         token.pos_ == "NOUN" or token.pos_ == "ADJ" or token.pos_ == "VERB"):
-                    artlist.append(
-                        token.lemma_.lower())
+                    artlist.append(token.lemma_.lower())
                     articleWordCloud.append(token.lemma_.lower())
+            # Add to list for training corpus
+            articleDocuments.append(artlist)
 
-            articleDocuments.append(artlist)  # Build the training corpus 'list of lists'
-
+        # Create bag of words and fit TF-IDF model
         ID2word = corpora.Dictionary(articleDocuments)
 
-        corpus = [ID2word.doc2bow(doc) for doc in
-                  articleDocuments]  # Apply Bag of Words to all documents in training corpus
-        TFIDF = models.TfidfModel(corpus)  # Fit TF-IDF model
-        trans_TFIDF = TFIDF[corpus]  # Apply TF-IDF model
+        corpus = [ID2word.doc2bow(doc) for doc in articleDocuments]
+        TFIDF = models.TfidfModel(corpus)
+        trans_TFIDF = TFIDF[corpus]
 
         # Train LDA model
         lda_model = gensim.models.LdaMulticore(corpus=trans_TFIDF, num_topics=3, id2word=ID2word,
                                                random_state=42, alpha=0.9, eta=0.35, passes=100)
-
+        # Write topics to list with 20 words each
         t_list = lda_model.print_topics(num_words=20)
-
+        # Call Topic_Classification method to get back the topic label
         ret_topic = Topic_Classification.assign_topic(t_list, self.master_list)
 
         return ret_topic
@@ -163,17 +159,21 @@ class Topic_Classification:
     # Perform classification on the returned topics of the grouped tweets and return a topic name.
     def assign_topic(topic_bows, master_list):
         max_value = 0
+        # Loop through the topic Bag of Words and weights to gain scores for each
         for bow in topic_bows:
             for i in range(len(master_list)):
                 score = Topic_Classification.compare_tuple_to_topic(bow, master_list[i][1])
+                # If the score is greater than the previous stored max value, then store it as new max value save topic
                 if score > max_value:
                     max_value = score
                     top_topic = master_list[i][0]
+        # If max value is less tha 0.02, assign it as miscellaneous category since score it too low
         if max_value < 0.02:
             return "misc"
         else:
             return top_topic
 
+    # Compare bag of words and weights of unlabelled tweets against the weights of master list and return score
     @staticmethod
     def compare_tuple_to_topic(tuple1, df1):
         df2 = Topic_Classification.tuple_to_df(tuple1)
@@ -181,6 +181,7 @@ class Topic_Classification:
         df['weight'] = df['weight1'] + df['weight2']
         return df['weight'].sum() / len(tuple1)
 
+    # Convert tuple to dataframe
     @staticmethod
     def tuple_to_df(tuple1):
         step1 = tuple1[1].split(" + ")
